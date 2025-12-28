@@ -66,15 +66,11 @@ Outputs:
   PublicIP:
     Description: Public IP address
     Value: !GetAtt myEC2Instance.PublicIp # Intrinsic Function (LogicalName.AttributeName)
-  StackVPC:
-    Description: The ID of the VPC
-    Value: !Ref MyVPC
   PrivateIP:
     Description: Private IPv4 address of the EC2 instance
     Value: !GetAtt myEC2Instance.PrivateIp
     Export:
       Name: !Sub '${AWS::StackName}-PrivateIP'
-
   PrivateDNS:
     Description: Private DNS name of the EC2 instance
     Value: !GetAtt myEC2Instance.PrivateDnsName
