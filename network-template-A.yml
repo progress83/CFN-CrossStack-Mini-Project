@@ -20,13 +20,16 @@ Resources:
       VpcId: !Ref VPC
       CidrBlock: 10.0.0.0/24
       Tags:
-      - Key: Name
-        Value: !Sub '${AWS::StackName}-public-subnet'
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-public-subnet'
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
-    Tags:
-      - Key: Name
-        Value: !Sub '${AWS::StackName}-igw'
+    Properties:
+      Tags:
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-igw'
+        - Key: Environment
+          Value: test
   VPCGatewayAttachment:
     Type: 'AWS::EC2::VPCGatewayAttachment'
     Properties:
@@ -37,8 +40,8 @@ Resources:
     Properties:
       VpcId: !Ref VPC
       Tags:
-      - Key: Name
-        Value: !Sub '${AWS::StackName}-public-rt'
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-public-rt'
   PublicRoute:
     Type: 'AWS::EC2::Route'
     DependsOn: VPCGatewayAttachment # forcing depencing
