@@ -9,13 +9,24 @@ Resources:
       EnableDnsSupport: 'true'
       EnableDnsHostnames: 'true'
       CidrBlock: 10.0.0.0/16
+      Tags:
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-vpc'
+        - Key: Environment
+          Value: test  
   PublicSubnet:
     Type: 'AWS::EC2::Subnet'
     Properties:
       VpcId: !Ref VPC
       CidrBlock: 10.0.0.0/24
+      Tags:
+      - Key: Name
+        Value: !Sub '${AWS::StackName}-public-subnet'
   InternetGateway:
     Type: 'AWS::EC2::InternetGateway'
+    Tags:
+      - Key: Name
+        Value: !Sub '${AWS::StackName}-igw'
   VPCGatewayAttachment:
     Type: 'AWS::EC2::VPCGatewayAttachment'
     Properties:
@@ -25,6 +36,9 @@ Resources:
     Type: 'AWS::EC2::RouteTable'
     Properties:
       VpcId: !Ref VPC
+      Tags:
+      - Key: Name
+        Value: !Sub '${AWS::StackName}-public-rt'
   PublicRoute:
     Type: 'AWS::EC2::Route'
     DependsOn: VPCGatewayAttachment # forcing depencing
@@ -54,6 +68,9 @@ Resources:
           FromPort: '80'
           ToPort: '80'
           CidrIp: 0.0.0.0/0
+      Tags:
+        - Key: Name
+          Value: !Sub '${AWS::StackName}-web-sg'
 
 Outputs:
   VPCId:
