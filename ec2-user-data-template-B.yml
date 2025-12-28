@@ -43,6 +43,7 @@ Resources:
       InstanceType: !Ref InstanceType # !FindInMap [RegionToInstanceType, !Ref 'AWS::Region', InstanceType]
       SecurityGroupIds:
         - !ImportValue SampleNetworkCrossStack-SecurityGroupID
+      AvailabilityZone: !Ref AvailabilityZone
       UserData: # User data to install apache webserver
         Fn::Base64: !Sub |
           #!/bin/bash
