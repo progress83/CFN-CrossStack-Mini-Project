@@ -22,3 +22,10 @@ A cross stack project with 2 cloudformation templates
 
 ### Screenshot of Apache WebPage
 <img width="1440" height="710" alt="Screenshot 2025-12-28 at 3 50 12 AM" src="https://github.com/user-attachments/assets/dcdc32b0-1d0b-4284-9df2-bb9cd8ddf84e" />
+
+### Deleting Stack From CLI
+<img width="915" height="62" alt="Screenshot 2025-12-28 at 4 13 38 AM" src="https://github.com/user-attachments/assets/20185701-8e4f-4d99-93c2-38a78b84e7b1" />
+
+<img width="1440" height="710" alt="Screenshot 2025-12-28 at 4 12 47 AM" src="https://github.com/user-attachments/assets/9359e534-d9ab-4071-bbe7-bd1e24e52d1c" />
+
+<img width="1433" height="390" alt="Screenshot 2025-12-28 at 4 14 05 AM" src="https://github.com/user-attachments/assets/a82ce4cd-a824-4ed5-a812-7d97750e6412" />
