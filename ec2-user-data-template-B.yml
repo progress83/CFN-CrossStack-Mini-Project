@@ -4,9 +4,6 @@ Parameters: # Parameters to request user input
   KeyName:
     Description: EC2 KeyPair
     Type: AWS::EC2::KeyPair::KeyName
-  AvailabilityZone:
-    Description: AZ
-    Type: List<AWS::EC2::AvailabilityZone::Name>
   InstanceType:
     Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
     Type: String
@@ -43,7 +40,6 @@ Resources:
       InstanceType: !Ref InstanceType # !FindInMap [RegionToInstanceType, !Ref 'AWS::Region', InstanceType]
       SecurityGroupIds:
         - !ImportValue SampleNetworkCrossStack-SecurityGroupID
-      AvailabilityZone: !Ref AvailabilityZone
       UserData: # User data to install apache webserver
         Fn::Base64: !Sub |
           #!/bin/bash
