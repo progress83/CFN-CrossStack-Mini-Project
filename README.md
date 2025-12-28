@@ -5,13 +5,13 @@ A cross stack project with 2 cloudformation templates
 ## Network Stack Created
 <img width="1439" height="724" alt="Screenshot 2025-12-28 at 12 29 50 AM" src="https://github.com/user-attachments/assets/c9109bd8-77a6-4d5e-ac5d-af478fbec23d" />
 
-## Network Template with Tags
+### Network Template with Tags
 <img width="1439" height="784" alt="Screenshot 2025-12-28 at 1 35 55 AM" src="https://github.com/user-attachments/assets/c939f405-e291-4a37-a24d-8889af7edc17" />
 
-## Network Resources Created
+### Network Resources Created
 <img width="1440" height="710" alt="Screenshot 2025-12-28 at 2 56 10 AM" src="https://github.com/user-attachments/assets/20fe8a12-47b2-4575-b54e-50f1fc91cec7" />
 
-# Template 2 with ec2 user data for apache installation
+## Template 2 with ec2 user data for apache installation
 
 <img width="1440" height="710" alt="Screenshot 2025-12-28 at 3 41 53 AM" src="https://github.com/user-attachments/assets/db16edf4-e5f6-4000-b4d1-7a531bf7d2f7" />
 <img width="1440" height="710" alt="Screenshot 2025-12-28 at 3 49 11 AM" src="https://github.com/user-attachments/assets/1c642f2c-9d32-4b72-aaf3-789592925812" />
